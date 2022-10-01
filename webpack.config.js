@@ -17,7 +17,7 @@ module.exports = (env) => ({
     open: false,
   },
   entry: {
-    index: ["./src/main.ts", "./src/index.css"],
+    index: ["./src/main.ts"],
   },
   stats: "normal",
   output: {
@@ -62,18 +62,29 @@ module.exports = (env) => ({
         type: "asset/source",
       },
       {
-        test: /\.(css)$/,
+        test: /\.(s[ac]ss|css)$/i,
         exclude: /\/node_modules\//,
         oneOf: [
           {
             resourceQuery: {
               not: [/\?ngResource/],
             },
-            use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+            // use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+            use: [
+              MiniCssExtractPlugin.loader,
+              "css-loader",
+              "postcss-loader",
+              "sass-loader",
+            ],
           },
           {
             type: "asset/source",
-            loader: "postcss-loader",
+            use: [
+              MiniCssExtractPlugin.loader,
+              "css-loader",
+              "postcss-loader",
+              "sass-loader",
+            ], // this works: use: ["sass-loader"] or use: ["postcss-loader", "sass-loader"]
           },
         ],
       },

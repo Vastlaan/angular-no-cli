@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 50%;
+
+  @include respond("m"){
+    font-size: 62.5%;
+  }
+}
+main{
+  font-size: $fontLarge;
+}
