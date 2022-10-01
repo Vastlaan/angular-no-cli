@@ -1,0 +1,38 @@
+{
+  "name": "angular-no-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --env development",
+    "build-dev": "webpack --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.4",
+    "@angular/compiler": "^14.2.4",
+    "@angular/compiler-cli": "^14.2.4",
+    "@ngtools/webpack": "^14.2.4",
+    "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "@angular/common": "^14.2.4",
+    "@angular/core": "^14.2.4",
+    "@angular/platform-browser": "^14.2.4",
+    "@angular/platform-browser-dynamic": "^14.2.4",
+    "rxjs": "^7.5.7",
+    "zone.js": "^0.11.8"
+  }
+}
